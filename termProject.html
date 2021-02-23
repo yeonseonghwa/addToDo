@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>TODO in HTML5 Skeleton</title>
+	<!-- CSS, JS External 정의 -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="termProjectCss.css">
+	<script src="termProjectJavascript.js"></script>
+</head>
+
+<body>
+	<!-- <article> -->
+		<header>
+			<!-- Header (Add ToDo 버튼, keyword 검색) -->
+			<button id="AddToDoButton" type="button" name="button" onclick="AddToDoShowdiv()">Add ToDo</button>
+
+			<select id="daySelect">
+				<!-- <option selected disabled hidden>day </option> -->
+				<option value="day">day</option>
+				<option value="Mon">Mon</option>
+				<option value="Tue">Tue</option>
+				<option value="Wed">Web</option>
+				<option value="Thu">Thu</option>
+				<option value="Fri">Fri</option>
+			</select>
+			<input id="input" type="text" Placeholder="Enter your keyword here" onkeydown="search(this)">
+			<!-- <b>Header</b> -->
+
+		</header>
+
+		<main>
+			<!-- Middle Bar A~D, Display Area A~D -->
+			<section id="middleBar_mon" class="middle">
+				<h3>-</h3>
+				<section class="middleTop"><h4>Mon</h4></section>
+				<section class="displayArea_mon">
+					<h4>월요일 목록</h4>
+				</section>
+			</section>
+			<!--경계선-->
+			<div class="mainLine"></div>
+
+			<section id="middleBar_tue" class="middle">
+				<h3>-</h3>
+				<section class="middleTop"><h4>Tue</h4></section>
+				<section class="displayArea_tue"><h4>화요일 목록</h4></section>
+			</section>
+			<div class="mainLine"></div>
+
+			<section id="middleBar_wed" class="middle">
+				<h3>-</h3>
+				<section class="middleTop"><h4>Wed</h4></section>
+				<section class="displayArea_wed"><h4>수요일 목록</h4></section>
+			</section>
+			<div class="mainLine"></div>
+
+			<section id="middleBar_thu" class="middle">
+				<h3>-</h3>
+				<section class="middleTop"><h4>Thu</h4></section>
+				<section class="displayArea_thu"><h4>목요일 목록</h4></section>
+			</section>
+			<div class="mainLine"></div>
+
+			<section id="middleBar_fri" class="middle">
+				<h3>-</h3>
+				<section class="middleTop"><h4>Fri</h4></section>
+				<section class="displayArea_fri"><h4>금요일 목록</h4></section>
+			</section>
+		</main>
+	<!-- </article> -->
+
+	<div id="bg">
+
+	</div>
+	<div id="AddToDoShow">
+		<img id="AddToDoWindowCancel" src="delete.png" alt="img" onclick="AddToDoHidediv()">
+		<!-- <button id="cancel" type="button" name="button" onclick="hidediv()">X</button> -->
+		<select id="AddToDoDaySelect">
+			<option value="mon">Mon</option>
+			<option value="tue">Tue</option>
+			<option value="wed">Wed</option>
+			<option value="thu">Thu</option>
+			<option value="fri">Fri</option>
+		</select>
+		<input id="ItemAl" type="text" Placeholder="Item Al">
+		<textarea id="ContentsAl" Placeholder="Contents Al"></textarea>
+		<button id="AddToDoDaySelectAdd" type="button" name="button" onclick="AddClick()">Add</button>
+	</div>
+
+	<div id="itemConfirmShow">
+		<img id="itemConfirmCancel" alt="img" src="delete.png" onclick="itemConfirmHidediv()">
+
+		<select id="itemConfirmDaySelect">
+			<option value="Mon">Mon</option>
+			<option value="Tue">Tue</option>
+			<option value="Wed">Wed</option>
+			<option value="Thu">Thu</option>
+			<option value="Fri">Fri</option>
+		</select>
+		<input id="confirmItemIndex" type="text">
+		<input id="confirmItemAl" type="text" Placeholder="Item Al">
+		<textarea id="confirmContentsAl" Placeholder="Contents Al"></textarea>
+		<button id="confirmSelectDone" type="button" name="button" onclick="DoneClick()">Done</button>
+	</div>
+
+</body>
+
+</html>
